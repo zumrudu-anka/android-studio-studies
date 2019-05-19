@@ -2,6 +2,7 @@ package com.zumrudu_anka.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -23,13 +24,12 @@ public class MainActivity extends AppCompatActivity {
         editText2 = findViewById(R.id.editText2);
         resulttext=findViewById(R.id.textView);
 
-        resulttext.setText("Tesxt test");
-
     }
 
     public void summing(View view){
 
         if(editText.getText().toString().matches("" ) || editText2.getText().toString().matches("" )){
+            resulttext.setTextColor(Color.RED);
             resulttext.setText("Hatalı Giriş");
         }
         else{
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void substracting(View view){
         if(editText.getText().toString().matches("" ) || editText2.getText().toString().matches("" )){
+            resulttext.setTextColor(Color.RED);
             resulttext.setText("Hatalı Giriş");
 
         }
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void mulling(View view){
         if(editText.getText().toString().matches("" ) || editText2.getText().toString().matches("" )){
+            resulttext.setTextColor(Color.RED);
             resulttext.setText("Hatalı Giriş");
         }
         else{
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void dividing(View view){
         if(editText.getText().toString().matches("" ) || editText2.getText().toString().matches("" )){
+            resulttext.setTextColor(Color.RED);
             resulttext.setText("Hatalı Giriş");
 
         }
