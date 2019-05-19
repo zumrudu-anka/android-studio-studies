@@ -1,4 +1,4 @@
-#Mini Calculator
+# Mini Calculator
 
 Basit Hesap Makinesi
 
