@@ -31,35 +31,32 @@ public class MainActivity extends AppCompatActivity {
         if(storedAge!=0){
             textView.setText(""+ storedAge);
         }
-
-        Toast.makeText(MainActivity.this,"Toast Message",Toast.LENGTH_LONG).show();
     }
 
     public void SaveText(View view){
-        if(!editText.getText().toString().matches("")){
-            int userAge = Integer.parseInt(editText.getText().toString());
-            textView.setText("" + userAge);
+        AlertDialog.Builder alert=new AlertDialog.Builder(this);
+        alert.setTitle("Save");
+        alert.setMessage("Are u sure?");
+        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            if(!editText.getText().toString().matches("")){
+                int userAge = Integer.parseInt(editText.getText().toString());
+                textView.setText("" + userAge);
+                sharedPreferences.edit().putInt("StoredAge",userAge).apply();
+            }
+            Toast.makeText(MainActivity.this,"Saved",Toast.LENGTH_LONG).show();
+            }
+        });
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this,"Not Saved",Toast.LENGTH_LONG).show();
 
-            sharedPreferences.edit().putInt("StoredAge",userAge).apply();
+            }
+        });
+        alert.show();
 
-            AlertDialog.Builder alert=new AlertDialog.Builder(this);
-            alert.setTitle("Save");
-            alert.setMessage("Are u sure?");
-            alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(MainActivity.this,"Saved",Toast.LENGTH_LONG).show();
-                }
-            });
-            alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(MainActivity.this,"Not Saved",Toast.LENGTH_LONG).show();
-
-                }
-            });
-            alert.show();
-        }
     }
 
     public void DeleteData(View view){
