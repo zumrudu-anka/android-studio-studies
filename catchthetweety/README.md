@@ -3,5 +3,5 @@
 <p align="center">Simple Android Game</p>
 
 <p align="center">
-  <img height="600" src="https://github.com/zumrudu-anka/android-studio-studies/tree/master/catchthetweety/Presentation/tweety.gif"/>
+  <img height="600" src="https://github.com/zumrudu-anka/android-studio-studies/blob/master/catchthetweety/Presentation/tweety.gif"/>
 </p>
