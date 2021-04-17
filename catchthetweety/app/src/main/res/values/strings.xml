@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">catch-the-tweety</string>
+    <string name="time">Time: %1$d</string>
+    <string name="time_off">Time Off</string>
+    <string name="score">Score: %1$d</string>
+    <string name="tweety_image">Tweety Image</string>
+</resources>
